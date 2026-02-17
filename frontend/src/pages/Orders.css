@@ -1,0 +1,86 @@
+.order-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    margin-bottom: 20px;
+    transition: var(--transition);
+    animation: pageIn 0.5s ease both;
+}
+
+.order-card:hover {
+    border-color: var(--gold-light);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.order-id {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ivory);
+}
+
+.order-date {
+    font-size: 13px;
+    color: var(--ivory-dim);
+    margin-top: 4px;
+}
+
+.order-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+.order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--ivory-dim);
+}
+
+.order-footer {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.status-select {
+    background: var(--surface-hover);
+    border: 1px solid var(--border);
+    color: var(--gold);
+    padding: 6px 12px;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.status-select:hover {
+    border-color: var(--gold);
+}
+
+.status-select option {
+    background: var(--surface-dark);
+    color: var(--ivory);
+}
