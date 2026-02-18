@@ -17,7 +17,8 @@ public class CorsConfig {
         CorsConfiguration config = new CorsConfiguration();
 
         config.setAllowedOrigins(List.of(
-                "https://store-frontend-llsd.onrender.com"
+                "https://store-frontend-llsd.onrender.com",
+                "http://localhost:5173"
         ));
 
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));

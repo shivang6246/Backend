@@ -1,5 +1,6 @@
 package com.example.multivendor.Store.Controller;
 
+import com.example.multivendor.Store.Dto.AuthResponse;
 import com.example.multivendor.Store.Dto.LoginRequest;
 import com.example.multivendor.Store.Dto.OtpRequest;
 import com.example.multivendor.Store.Dto.RegisterRequest;
@@ -29,10 +30,10 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(
+    public ResponseEntity<AuthResponse> login(
             @Valid @RequestBody LoginRequest request) throws Exception {
 
-        String response = authService.loginUser(request);
+        AuthResponse response = authService.loginUser(request);
         return ResponseEntity.ok(response);
     }
 
@@ -57,13 +58,8 @@ public class AuthController {
         }
     }
 
-
-
-        @GetMapping("/")
-        public String home() {
-            return "Backend is running 🚀";
-        }
+    @GetMapping("/")
+    public String home() {
+        return "Backend is running 🚀";
     }
-
-
-
+}
