@@ -57,4 +57,13 @@ public class AuthController {
         }
     }
 
-}
+
+
+        @GetMapping("/")
+        public String home() {
+            return "Backend is running 🚀";
+        }
+    }
+
+
+
